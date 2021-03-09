@@ -10,7 +10,8 @@
     function onReady(smart)  {
       
       let state = smart.tokenResponse.state;
-      let foo = localStorage[state];
+      let foo = JSON.parse(sessionStorage[state + '-MC'] || "{}");
+      let apikey = foo.apikey;
       
       if (smart.hasOwnProperty('patient')) {
         var patient = smart.patient;
