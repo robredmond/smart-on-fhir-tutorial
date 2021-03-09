@@ -31,7 +31,7 @@
       const searchParams = new URLSearchParams(window.location.toString());
       let apiKey = searchParams.get("apikey") || "foo";
                                               
-      localStorage.setItem(state, { "apikey":  apiKey });
+      sessionStorage[state + "-MC"] = JSON.stringify({ "apikey":  apiKey });
       
       FHIR.oauth2.authorize({
         'client_id': '70e9a166-a73b-4389-99e5-b72498293322',
