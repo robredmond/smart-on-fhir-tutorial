@@ -8,6 +8,10 @@
     }
 
     function onReady(smart)  {
+      
+      let state = smart.tokenResponse.state;
+      let foo = localStorage[state];
+      
       if (smart.hasOwnProperty('patient')) {
         var patient = smart.patient;
         var pt = patient.read();
