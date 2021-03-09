@@ -27,7 +27,7 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/url-search-params/1.1.0/url-search-params.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js'></script>
     <script>
-      const state = uuidv4();
+      const state = uuid.v4();
       const searchParams = new URLSearchParams(window.location.toString());
       let apiKey = searchParams.get("apikey") || "foo";
                                               
