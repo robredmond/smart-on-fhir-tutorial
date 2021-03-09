@@ -28,7 +28,7 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js'></script>
     <script>
       const state = uuid.v4();
-      const searchParams = new URLSearchParams(window.location.toString());
+      const searchParams = new URLSearchParams(window.location.href);
       let apiKey = searchParams.get("apikey") || "foo";
                                               
       sessionStorage[state + "-MC"] = JSON.stringify({ "apikey":  apiKey });
